@@ -23,7 +23,7 @@ class ControllerMarcas {
 
     CadastrarMarca(req, res) {
         try {
-            const marca = req.body;
+            const marca = req.body.marca;
             const novaMarca = ServiceMarcas.CadastrarMarca(marca);
             res.status(201).json({ novaMarca });
         } catch (error) {
@@ -34,7 +34,7 @@ class ControllerMarcas {
     AtualizarMarca(req, res) {
         try {
             const id = req.params.id;
-            const marcaAtualizada = req.body;
+            const marcaAtualizada = req.body.marca;
             const marca = ServiceMarcas.AtualizarMarca(id, marcaAtualizada);
             res.json({ marca });
         } catch (error) {

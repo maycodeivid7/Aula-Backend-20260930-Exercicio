@@ -1,3 +1,4 @@
+// npm run dev
 import express from "express";
 import router from "./src/router/marcas.js";
 
