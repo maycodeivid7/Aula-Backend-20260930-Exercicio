@@ -4,10 +4,10 @@ import ControllerMarcas from "../controller/marcas.js";
 
 const router = express.Router();
 
-router.get("/buscar", ControllerMarcas.listarMarcas);
-router.get("/buscar/:id", ControllerMarcas.buscarMarcaPorId);
-router.post("/cadastrar", ControllerMarcas.cadastrarMarca);
-router.put("/atualizar/:id", ControllerMarcas.atualizarMarca);
-router.delete("/deletar/:id", ControllerMarcas.deletarMarca);
+router.get("/listarmarcas", ControllerMarcas.ListarMarcas);
+router.get("/buscarmarcaporid/:id", ControllerMarcas.BuscarMarcaPorId);
+router.post("/cadastrarmarca", ControllerMarcas.CadastrarMarca);
+router.put("/atualizarmarca/:id", ControllerMarcas.AtualizarMarca);
+router.delete("/deletarmarca/:id", ControllerMarcas.DeletarMarca);
 
 export default router;
